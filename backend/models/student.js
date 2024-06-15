@@ -5,6 +5,10 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    id:{
+        type: String,
+        required: true
+    },
     level: {
         type: [{}],  // Array of level subdocuments
         default: [{ value: 0, date: Date.now }]
