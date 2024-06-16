@@ -15,6 +15,7 @@ const app = express();
 app.use(express.json());
 
 
+// Apply CORS options to all routes
 app.use(cors());
 
 app.use((req, res, next) => {

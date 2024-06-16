@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../pictures/logo.png";
-
 import { useAuthContext } from "../hooks/useAuthContext";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContextNGO } from "../hooks/useAuthContextNGO";
@@ -21,23 +19,26 @@ const Navbar = () => {
   };
 
   return (
-    <header>
-      <div className="text-gray-600 text-xl font-bold bg-teal-50 h-14 flex items-center p-10 place-content-between border-b-2 border-teal-400 shadow-md">
-        <div>
+    <header className="relative">
+      <div className="relative text-gray-600 text-l font-bold bg-teal-50 h-14 flex items-center p-10 justify-between border-b-2 border-teal-400 shadow-md">
+        <div className="relative">
           <Link to="/">
             <div className="w-2/5 h-1/3">
-             
+              {/* You can place your logo here */}
             </div>
           </Link>
         </div>
-        <nav className="flex w-1/2 place-content-around items-center">
+        <nav className="relative flex w-1/2 justify-around items-center">
           {donor && (
             <>
               <Link to="/" className="hover:text-teal-500 transition duration-300">
                 <h1>Home</h1>
               </Link>
-              <Link to="/donateNow" className="hover:text-teal-500 transition duration-300">
+              <Link to="/classes" className="hover:text-teal-500 transition duration-300">
                 <h1>School</h1>
+              </Link>
+              <Link to="/dash" className="hover:text-teal-500 transition duration-300">
+                <h1>Take test</h1>
               </Link>
               <button
                 onClick={handleClick}
@@ -53,11 +54,8 @@ const Navbar = () => {
               <Link to="/" className="hover:text-teal-500 transition duration-300">
                 <h1>Home</h1>
               </Link>
-              <Link to="/donationsNGO" className="hover:text-teal-500 transition duration-300">
-                <h1>Donations</h1>
-              </Link>
-              <Link to="/bookedFoodNGO" className="hover:text-teal-500 transition duration-300">
-                <h1>Booked Donations</h1>
+              <Link to="/all-schools" className="hover:text-teal-500 transition duration-300">
+                <h1>School</h1>
               </Link>
               <button
                 onClick={handleClickNGO}
