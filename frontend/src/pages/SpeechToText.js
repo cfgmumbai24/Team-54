@@ -18,6 +18,13 @@ const SpeechToText = () => {
     1: `Alphabet: k`
   };
 
+  const videoUrls = {
+    4: 'https://www.youtube.com/embed/lY4AK4LVqBA',
+    3: 'https://www.youtube.com/embed/Slue8jnaOfM',
+    2: 'https://www.youtube.com/embed/Slue8jnaOfM',
+    1: 'https://www.youtube.com/embed/6GMAugzV5ls' // Defaulting to the same video as 'Alphabet'
+  };
+
   useEffect(() => {
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
       setMessage("Browser doesn't support speech recognition.");
@@ -90,6 +97,19 @@ const SpeechToText = () => {
               {message && (
                 <div className="alert alert-info text-center" role="alert">
                   {message}
+                </div>
+              )}
+              {level >= 1 && level <= 4 && (
+                <div className="embed-responsive embed-responsive-16by9">
+                   <iframe
+                    title="Numeracy Video"
+                    width="100%"
+                    height="500"
+                    src={videoUrls[level]}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               )}
             </div>

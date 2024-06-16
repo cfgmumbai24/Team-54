@@ -12,6 +12,7 @@ import LoginNGO from "./pages/NGO/loginNGO";
 import Allcards from "./pages/allcards.js";
 import SchoolDashboard from "./pages/SchoolDashboard.js";
 import SchoolDashboardHistory from "./pages/SchoolDashboardHistory.js";
+import AboutUs from "./pages/aboutus.js";
 
 function App() {
   const {donor} = useAuthContext()
@@ -30,6 +31,7 @@ function App() {
           <Route path="/all-schools" element={<Allcards/>}/>
           <Route path="/dash" element={<SchoolDashboard/>}/>
           <Route path="/dash1" element={<SchoolDashboardHistory/>}/>
+          <Route path="/aboutus" element={<AboutUs/>}/>
         </Routes>
       </BrowserRouter>
     </div>
