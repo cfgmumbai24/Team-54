@@ -27,7 +27,6 @@ function CardsPage() {
           key={index} // Each child in a list should have a unique key prop
           image={student.image || 'https://via.placeholder.com/150'} // Provide a placeholder image if none exists
           title={student.name}
-          description={"wow yaar"}
         />
       ))}
     </div>
