@@ -13,13 +13,14 @@ import Allcards from "./pages/allcards.js";
 import SchoolDashboard from "./pages/SchoolDashboard.js";
 import SchoolDashboardHistory from "./pages/SchoolDashboardHistory.js";
 import AboutUs from "./pages/aboutus.js";
+import Footer from "./components/Footer.js";
 
 function App() {
   const {donor} = useAuthContext()
   const {ngo} = useAuthContextNGO()
 
   return (
-    <div className="bg-teal-50 h-screen">
+    <div className="bg-teal-50 h-screen h-full">
       <BrowserRouter>
         
         <Routes>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/dash1" element={<SchoolDashboardHistory/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

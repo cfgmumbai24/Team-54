@@ -1,0 +1,69 @@
+Navbar.css
+
+.navbar-header {
+    position: relative;
+    background-color: #f0fdfa; /* Equivalent to bg-teal-50 */
+    border-bottom: 2px solid #14b8a6; /* Equivalent to border-teal-400 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+    font-weight: bold;
+    color: #4b5563; /* Equivalent to text-gray-600 */
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* Equivalent to p-4 */
+    font-size: 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem; /* Equivalent to p-4 md:p-10 */
+}
+
+.navbar-logo {
+    margin-right: 2rem; /* Equivalent to mb-4 */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.navbar-link {
+    margin: 0 1rem; /* Spacing between links */
+    color: #4b5563; /* Same as the text color */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    color: #14b8a6; /* Equivalent to hover:text-teal-500 */
+}
+
+.navbar-button {
+    margin-left: 1rem; /* Equivalent to mt-2 */
+    padding: 0.5rem 1rem; /* Equivalent to px-4 py-2 */
+    background-color: #14b8a6; /* Equivalent to bg-teal-400 */
+    color: white;
+    border: none;
+    border-radius: 0.25rem; /* Equivalent to rounded */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-button:hover {
+    background-color: #0f766e; /* Equivalent to hover:bg-teal-500 */
+}
+
+@media (min-width: 768px) {
+    /* md screen and up */
+    .navbar-container {
+      padding: 1rem 2rem; /* More padding on larger screens */
+    }
+}

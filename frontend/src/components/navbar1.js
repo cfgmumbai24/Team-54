@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    // <header className="relative">
+    <header className="relative">
       <div className="relative text-gray-600 font-bold bg-teal-50 h-14 flex flex-col md:flex-row items-center p-4 md:p-10 justify-between border-b-2 border-teal-400 shadow-md">
         <div className="relative flex items-center justify-center mb-4 md:mb-0">
           <Link to="/">
@@ -34,8 +34,11 @@ const Navbar = () => {
               <Link to="/" className="hover:text-teal-500 transition duration-300">
                 {/* <h1>Home</h1> */}
               </Link>
+              <Link to="/classes" className="hover:text-teal-500 transition duration-300">
+                <h1>School</h1>
+              </Link>
               <Link to="/dash" className="hover:text-teal-500 transition duration-300">
-                <h1>Dashboard</h1>
+                <h1>Take test</h1>
               </Link>
               <button
                 onClick={handleClick}
@@ -84,7 +87,7 @@ const Navbar = () => {
           )}
         </nav>
       </div>
-    // </header>
+    </header>
   );
 };
 

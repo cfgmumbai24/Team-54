@@ -1,3 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* index.css or global.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E6FFFA; /* Tailwind's teal-50 color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* If you're using Tailwind directly in the project */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
